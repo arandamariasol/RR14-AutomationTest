@@ -1,14 +1,15 @@
 const Page = require('./page');
 
-class LoginPage extends Page {
+class RegisterPage extends Page {
   
+    get inputFname () { return $('#fname') }
     get inputEmail () { return $('#email') }
     get inputPassword () { return $('#pass') }
+    get inputPepPassword () { return $('#rpass') }
     get btnSubmit () { return $('button[type="submit"]') }
-    get inputEmailError () { return $('#email-err') }
 
     open () {
-        return super.open('login');
+        return super.open('register');
     }
 
     submit () {
@@ -16,4 +17,4 @@ class LoginPage extends Page {
     }
 }
 
-module.exports = new LoginPage();
+module.exports = new RegisterPage();
